@@ -1,0 +1,59 @@
+version: "3.7"
+
+services:
+  sqlDatabase:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      # TODO bind to enviroment variables
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./services/db:/var/lib/mysql
+    networks:
+        connector:
+            ipv4_address: 192.168.111.9
+
+  apis:
+    build:
+      context: ./services/apis
+      dockerfile: Dockerfile
+    expose:
+      - 8080
+    networks:
+        connector:
+            ipv4_address: 192.168.111.10
+
+  frontend:
+    build:
+      context: ./services/frontend
+      dockerfile: Dockerfile
+    expose:
+      - 5000
+    networks:
+      connector:
+        ipv4_address: 192.168.111.11
+
+  nginx:
+      build:
+        context: ./services/nginx
+      restart: always
+      ports:
+        - 80:80
+      depends_on:
+        - frontend
+      networks:
+        connector:
+            ipv4_address: 192.168.111.12
+
+networks:
+  connector:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.111.0/24

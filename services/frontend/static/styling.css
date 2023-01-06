@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+}
+
+div#nav {
+    background-color: #FCBF49;
+    box-shadow: 0px 1px 6px 0px #b87c0499;
+    height: 80px;
+    width: 100%;
+    padding: 15px calc(50% - 700px);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+div#nav div.left,
+div#nav div.right {
+    height: 100%;
+}
+
+div#nav svg#signature {
+    height: 100%;
+}
+
+div#nav svg#signature path.S {
+    stroke-dasharray: 319;
+    stroke-dashoffset: 319;
+    animation: animateSignature 1s linear;
+    animation-fill-mode: forwards;
+}
+
+div#nav svg#signature path.D {
+    stroke-dasharray: 255;
+    stroke-dashoffset: 255;
+    animation: animateSignature 0.7s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+div#nav svg#signature path.asys {
+    stroke-dasharray: 383;
+    stroke-dashoffset: 383;
+    animation: animateSignature 3s ease;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateSignature {
+    to {
+        stroke-dashoffset: 0
+    } 
+}
+
+div#nav input#pseudoHamburger {
+    display: none;
+}
+
+div#nav div.navButtons {
+    display: none;
+}
+
+div#nav #pseudoHamburger:checked ~ div.navButtons {
+    display: block;
+}
+
+div#nav #pseudoHamburger:checked ~ label {
+    background-color: rebeccapurple;
+}
