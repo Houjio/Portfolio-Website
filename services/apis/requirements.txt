@@ -1,3 +1,6 @@
 pydantic == 1.10.4
 fastapi == 0.88.0
 uvicorn == 0.20.0
+sqlalchemy==1.4.46
+mysql-connector-python==8.0.31
+pydantic-sqlalchemy==0.0.9
