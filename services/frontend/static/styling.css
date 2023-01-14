@@ -1,68 +1,175 @@
+html {
+    font-size: calc(15px + 0.390625vmax);
+    background-color: #444;
+    font-family: 'Lato';
+    color: white;
+}
+
 * {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+label,
+a,
+button {
+    cursor: pointer;
+    color: white;
+}
+
 div#nav {
-    background-color: #FCBF49;
-    box-shadow: 0px 1px 6px 0px #b87c0499;
-    height: 80px;
-    width: 100%;
-    padding: 15px calc(50% - 700px);
+    height: 3rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    transition: height 0.5s, background-color 0.5s;
+}
+
+.basewidth {
+    padding: 0px 150px;
     box-sizing: border-box;
+    width: 100%;
 }
 
-div#nav div.left,
-div#nav div.right {
-    height: 100%;
+@media only screen and (max-width: 1200px) {
+    .basewidth{
+        padding: 0px 100px;
+    }
 }
 
-div#nav svg#signature {
-    height: 100%;
+@media only screen and (max-width: 1000px) {
+    .basewidth{
+        padding: 0px 30px;
+    }
 }
 
-div#nav svg#signature path.S {
-    stroke-dasharray: 319;
-    stroke-dashoffset: 319;
-    animation: animateSignature 1s linear;
-    animation-fill-mode: forwards;
+div#nav h1 {
+    font-size: 1.5rem;
+    transition: font-size 0.5s;
+    font-family: 'Montserrat';
+    font-weight: 600;
 }
 
-div#nav svg#signature path.D {
-    stroke-dasharray: 255;
-    stroke-dashoffset: 255;
-    animation: animateSignature 0.7s linear;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+div#nav h1 span {
+    font-weight: 300;
 }
 
-div#nav svg#signature path.asys {
-    stroke-dasharray: 383;
-    stroke-dashoffset: 383;
-    animation: animateSignature 3s ease;
-    animation-delay: 1.7s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animateSignature {
-    to {
-        stroke-dashoffset: 0
-    } 
-}
-
-div#nav input#pseudoHamburger {
+div#nav input#pseudoHamburger,
+div#nav label.hamburgerLabel {
     display: none;
 }
 
 div#nav div.navButtons {
-    display: none;
+    display: flex;
+    height: 100%;
 }
 
-div#nav #pseudoHamburger:checked ~ div.navButtons {
-    display: block;
+div#nav div.navButtons button {
+    border: none;
+    height: 100%;
+    padding: 20px 15px;
+    font-size: 1.1rem;
+    background-color: transparent;
+    transition: background-color 500ms, font-size 0.5s;
 }
 
-div#nav #pseudoHamburger:checked ~ label {
-    background-color: rebeccapurple;
+div#nav div.navButtons button:hover {
+    background-color: #33333377;
+}
+
+html:not([data-scroll='0']) div#nav {
+    height: 2.5rem;
+    background-color: #00000040;
+}
+
+html:not([data-scroll='0']) div#nav h1 {
+    font-size: 1.25rem;
+}
+
+html:not([data-scroll='0']) div#nav div.navButtons button {
+    font-size: 1rem;
+    padding: 11px 15px;
+}
+
+html:not([data-scroll='0']) div#nav svg.hamburgerIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+div#nav #pseudoHamburger:checked~div.navButtons {
+    display: flex;
+}
+
+div#nav svg.hamburgerIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: height 0.5s, width 0.5s;
+}
+
+div#nav svg.hamburgerIcon path {
+    fill: #fff;
+    transition: transform 150ms, opacity 50ms;
+}
+
+div#nav #pseudoHamburger:checked~label.hamburgerLabel path.top {
+    transform: translateX(50px) rotate(45deg);
+}
+
+div#nav #pseudoHamburger:checked~label.hamburgerLabel path.middle {
+    opacity: 0;
+}
+
+div#nav #pseudoHamburger:checked~label.hamburgerLabel path.bottom {
+    transform: translate(-70px, 50px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 800px), (orientation: portrait) and (max-width: 1800px) {
+    div#nav {
+        height: 5rem;
+    }
+    
+    div#nav label.hamburgerLabel {
+        display: block;
+    }
+
+    .basewidth {
+        padding: 15px 50px;
+    }
+
+    div#nav div.navButtons {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        height: auto;
+        top: 3.3rem;
+        right: 50px;
+    }
+
+    html:not([data-scroll='0']) div#nav div.navButtons {
+        top: 2.35rem;
+    }
+
+    div#nav div.navButtons button {
+        padding: 1rem 1.2rem;
+        background-color: #333333e0;
+        width: 100%;
+        font-size: 1.5rem;
+        border-radius: 1px;
+    }
+
+    div#nav div.navButtons button:hover {
+        background-color: #222222ee;
+    }
+
+    div#nav h1 {
+        font-size: 2rem;
+    }
 }

@@ -1,3 +1,6 @@
 env
 services/db
 __pycache__
+
+services/frontend/static/signature.svg
+services/frontend/static/me2.svg
