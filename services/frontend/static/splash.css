@@ -169,6 +169,7 @@ div.projects {
     gap: 1.5rem;
     z-index: 8;
     grid-template-columns: auto auto auto;
+    margin-bottom: 150px;
 }
 
 div.projects > label > input[name='selectedProject'] {

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Float, Integer, String, ForeignKey
+from sqlalchemy import Column, Text, Integer, String, Boolean
 from sqlalchemy.orm import relationship
 
 from typing import Optional
@@ -8,41 +8,22 @@ from pydantic import BaseModel
 from .database import Base
 
 
-class Products(Base):
-    __tablename__ = "products"
+class Acess(Base):
+    __tablename__ = "acess"
 
-    sku = Column(Integer, primary_key=True, index=True)
+    code = Column(Integer, primary_key=True, index=True)
     name = Column(String(100))
-    quantity = Column(Integer)
-    quantityFormat = Column(Integer)
-    ingredientId = Column(Integer)
-    brand = Column(String(75))
-    category = Column(String(75))
-    categoryUrl = Column(String(75))
+    coverLetter = Column(Text)
+    french = Column(Boolean)
 
-    # instances      = relationship("Listing", back_populates="id")
+PydanticAcess = sqlalchemy_to_pydantic(Acess)
 
 
-class Listing(Base):
-    __tablename__ = "listing"
+class AcessUpdate(BaseModel):
+    name: Optional[str]
+    coverLetter: Optional[str]
+    french: Optional[bool]
 
-    id = Column(Integer, primary_key=True, index=True)
-    provider = Column(String(75))
-    price = Column(Float, index=True)
-    lastUpdate = Column(Integer)
-    skuReference = Column(Integer, ForeignKey("products.sku"))
-
-    # linkedProduct = relationship("Products", back_populates="sku")
-
-
-PydanticProducts = sqlalchemy_to_pydantic(Products)
-PydanticListing = sqlalchemy_to_pydantic(Listing)
-
-class ProductUpdate(BaseModel):
-    name: Optional[str] = None
-    quantity: Optional[int] = None
-    quantityFormat: Optional[int] = None
-    ingredientId: Optional[int] = None
-    brand: Optional[str] = None
-    category: Optional[str] = None
-    categoryUrl: Optional[str] = None
+class KeyResponse(BaseModel):
+    sucess: bool
+    key: int

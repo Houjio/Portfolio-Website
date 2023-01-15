@@ -1,0 +1,90 @@
+<body>
+    <header>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <style>
+            * {
+                margin: 0;
+                font-family: 'Lato';
+            }
+
+            html {
+                font-size: calc(15px + 0.390625vmax);
+            }
+
+            div#background {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #44444444;
+            }
+
+            div#modal {
+                padding: 2rem 4rem;
+                border-radius: 3px;
+                background-color: #eee;
+                box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.6);
+            }
+
+            p.text {
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            div.input_container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            input {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.2rem;
+            }
+
+            input[name="key"] {
+                flex-grow: 1;
+                border-right: none;
+            }
+
+            input[type="submit"] {
+                border-left: none;
+            }
+
+            p.error {
+                margin-top: 1.5rem;
+                color: #c22;
+                text-align: center;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div id="background">
+            <div id="modal">
+                <form method="post" action="/">
+                    <p class="text">What is your acess code?</p>
+                    <div class="input_container">
+                        <input name="key" />
+                        <input type="submit" value="submit" />
+                    </div>
+                    <p class="error">{{ error }}</p>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <script>
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                console.log(this.responseText);
+                document.getElementById("response").innerText = this.responseText;
+            }
+
+            xhttp.open("GET", "http://192.168.111.10:8080/acess/444555");
+            xhttp.send();
+        </script>
+    </body>
+</body>

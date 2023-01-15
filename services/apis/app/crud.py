@@ -4,41 +4,37 @@ from sqlalchemy.orm import Session
 from . import models
 
 
-def create_product(db: Session, product: models.PydanticProducts):
-    db_product = models.Products(
-        sku=product.sku,
-        name=product.name,
-        quantity=product.quantity,
-        quantityFormat=product.quantityFormat,
-        ingredientId=product.ingredientId,
-        brand=product.brand,
-        category=product.category,
-        categoryUrl=product.categoryUrl,
+def create_acess(db: Session, acess: models.PydanticAcess):
+    db_acess = models.Acess(
+        code = acess.code,
+        name = acess.name,
+        coverLetter = acess.coverLetter,
+        french = acess.french,
     )
-    db.add(db_product)
+    db.add(db_acess)
     db.commit()
 
-    return product
+    return acess
 
 
-def get_products(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(models.Products).offset(skip).limit(limit).all()
+def get_acess_plural(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.Acess).offset(skip).limit(limit).all()
 
 
-def get_product(db: Session, sku: int) -> Union[models.Products, None]:
-    return db.query(models.Products).filter(models.Products.sku == sku).first()
+def get_acess(db: Session, code: int) -> Union[models.Acess, None]:
+    return db.query(models.Acess).filter(models.Acess.code == code).first()
 
-def update_product(db: Session, product: models.Products, productUpdate: models.ProductUpdate):
-    updateDict = productUpdate.dict(exclude_none=True)
+def update_product(db: Session, acess: models.Acess, acessUpdate: models.AcessUpdate):
+    updateDict = acessUpdate.dict(exclude_none=True)
     for key, value in updateDict.items():
-        product.__setattr__(key, value)
+        acess.__setattr__(key, value)
 
-    db.add(product)
+    db.add(acess)
     db.commit()
 
-    return models.PydanticProducts.from_orm(product)
+    return models.PydanticAcess.from_orm(acess)
 
-def delete_product(db: Session, product: models.Products) -> dict:
-    db.delete(product)
+def delete_product(db: Session, acess: models.Acess) -> dict:
+    db.delete(acess)
     db.commit()
     return {"ok": True}
