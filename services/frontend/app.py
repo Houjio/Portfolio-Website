@@ -63,10 +63,5 @@ def coverletter():
     return render_template("coverletter.html", **resp)
 
 
-@app.route('/tester')
-def tester():
-    return render_template("tester.html")
-
-
 if __name__ == '__main__':
     app.run()

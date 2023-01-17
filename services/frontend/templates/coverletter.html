@@ -13,5 +13,10 @@
     </div>
 </div>
 
-
+<script>
+    document.addEventListener('scroll', () => {
+        var scrollPos = window.scrollY;
+        document.documentElement.dataset.scroll = scrollPos;
+    });
+</script>
 {% endblock %}

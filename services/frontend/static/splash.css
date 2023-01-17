@@ -82,24 +82,27 @@ div.signatureWrapper svg path {
 div.signatureWrapper svg path.SD {
     stroke-dasharray: 1041;
     stroke-dashoffset: 1041;
-    animation: animateSignature 1.5s linear;
-    animation-delay: 2s;
+    animation: animateSignature 0.75s linear;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
 div.signatureWrapper svg path.asys {
     stroke-dasharray: 933;
     stroke-dashoffset: 933;
-    animation: animateSignature 4s ease;
-    animation-delay: 3.5s;
+    animation: animateSignature 2s ease;
+    animation-delay: 1.75s;
     animation-fill-mode: forwards;
 }
 
 div.signatureWrapper svg path#signatureExtention {
     stroke-dasharray: 416;
     stroke-dashoffset: 416;
-    /* transform: scaleY(0.4) translateY(120px); */
-    animation: animateSignature 1s ease;
+}
+
+div.signatureWrapper svg path#bike {
+    stroke-dasharray: 1217;
+    stroke-dashoffset: 1217;
 }
 
 svg.animate {
@@ -168,26 +171,12 @@ div.projects {
     display: grid;
     gap: 1.5rem;
     z-index: 8;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 150px;
 }
 
-div.projects > label > input[name='selectedProject'] {
+div.projects input[name='selectedProject'] {
     display: none;
-}
-
-@media only screen and (max-width: 1000px),
-(orientation: portrait) and (max-width: 1400px) {
-    div.projects {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media only screen and (max-width: 800px),
-(orientation: portrait) and (max-width: 1000px) {
-    div.projects {
-        grid-template-columns: auto;
-    }
 }
 
 div.projects div.projectCell {
@@ -195,17 +184,22 @@ div.projects div.projectCell {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #444;
-    height: 300px;
+    height: 150px;
     opacity: 1;
     border-radius: 4px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     transition: background-size 0.5s;
 }
 
-div.projects div.projectCell h3.title {
+div.projects div.projectCell label {
+    height: 100%;
+    cursor: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.projects div.projectCell div.header {
     width: 100%;
     padding: 0.5rem 0.75rem;
     box-sizing: border-box;
@@ -217,30 +211,41 @@ div.projects div.projectCell:hover {
     background-size: 105% auto;
 }
 
-div.projects div.projectCell:hover h3.title {
+div.projects div.projectCell:hover div.header {
     background-color: #444444c0;
 }
 
-div.projectCell div.context {
+div.projectCell p.description,
+div.projectCell div.header h4 {
     display: none;
     width: 100%;
-    padding: 0.5rem 0.75rem;
     box-sizing: border-box;
 }
 
-div.projects input[name='selectedProject']:checked ~ div.projectCell div.context {
+div.projectCell p.description {
+    padding: 0.5rem 0.75rem;
+    background-color: #444444c0;
+}
+
+div.projects input[name='selectedProject']:checked + div.projectCell {
+    height: 400px;
+    cursor: default;
+    grid-area: 1 / 1 / 1 / 5;
+}
+
+div.projects input[name='selectedProject']:checked + div.projectCell div.header {
+    background-color: #444444c0;
+}
+
+div.projects input[name='selectedProject']:checked + div.projectCell:hover div.header {
+    background-color: #444444c0;
+}
+
+div.projects input[name='selectedProject']:checked + div.projectCell p.description,
+div.projects input[name='selectedProject']:checked + div.projectCell div.header h4 {
     display: block;
 }
 
-div.sources {
-    margin-top: 300px;
-    margin-bottom: 150px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-}
-
-div.sources div.modal {
-    padding: 2rem 4rem;
-    background-color: #444444ee;
+div.projects input[name='selectedProject']:checked + div.projectCell:hover {
+    background-size: 100% auto;
 }

@@ -3,9 +3,6 @@
 {% block head %}
 <link rel="stylesheet" href="/static/splash.css" />
 <script src="/static/jquery.fittext.js"></script>
-<script>
-    $("#welcome").fitText(3);
-</script>
 {% endblock %}
 
 {% block content %}
@@ -27,7 +24,7 @@
                 d="m195.25 210.29c-1.5122 55.208 41.175 206.55 41.938 136.73 2.9234-65.218-84.225 196.57-84.225 196.57"
                 fill="none" />
         </g>
-        <path
+        <path id="bike"
             d="m464.74 502.93c-23.533 64.074-35.32 83.819-39.408 81.724-45.107-23.104-21.347-68.029 3.6339-68.391 40.953 0.82877 61.029 59.756-0.91274 68.451 0.88702-26.619 3.6942-30.463 8.0937-31.522 4.3994-1.059 57.355 21.973 35.724 79.69-17.721-7.0209-48.603-36.914-43.033-38.528 23.579 1.7349 59.557 48.313 66.397-24.336 2.4753-26.29 76.053 24.452 17.459 65.281-10.782 7.5129 11.525 27.001 24.19 11.026 2.83-15.709 24.601-20.516-50.027-23.317-6.9753-0.26162-13.121 47.867 2.3842 39.071 12.664-17.023-27.118-15.71-27.118-15.71s-13.374 59.741-51.693 35.887c-41.738-25.982 5.5381-72.655 33.522-58.913 26.633 16.649 48.094 126.36 48.094 126.36"
             fill="none" />
     </svg>
@@ -50,79 +47,134 @@
 
     <div class="projects basewidth" id="projects">
 
-        <label for="project1rad">
-            <input type="radio" id="project1rad" name="selectedProject" />
-            <div class="projectCell" style="background-image: url('/static/images/project1.png');">
-                <h3 class="title">VTK mine visualizer</h3>
-                <div class="context">
+        <input type="radio" id="project1rad" name="selectedProject" checked />
+        <div class="projectCell" style="background-image: url('/static/images/project1.png');">
+            <label for="project1rad">
+                <div class="header">
+                    <h3 class="title">VTK mine visualizer</h3>
                     <h4 class="compagny">Objectivity</h4>
-                    <p class="description">
-                        Built a page to compare exploration drill hole plans.
-                        I used plotly's Dash-VTK library to present the data
-                        on a 3D representation of the drill holes.
-                    </p>
                 </div>
-            </div>
-        </label>
 
-        <label for="project2rad">
-            <input type="radio" id="project2rad" name="selectedProject" />
-            <div class="projectCell" style="background-image: url('/static/images/project2.png');">
-                <h3 class="title">SAQ scrapper and interface</h3>
-                <div class="context">
+                <p class="description">
+                    Built a page to compare exploration drill hole plans.
+                    I used plotly's Dash-VTK library to present the data
+                    on a 3D representation of the drill holes.
+                </p>
+            </label>
+        </div>
+
+        <input type="radio" id="project2rad" name="selectedProject" />
+        <div class="projectCell" style="background-image: url('/static/images/project2.png');">
+            <label for="project2rad">
+                <div class="header">
+                    <h3 class="title">SAQ scrapper and interface</h3>
                     <h4 class="compagny">Personal project</h4>
-                    <p class="description">
-                        Scrapped the SAQ website to copy their inventory to a mongo database.
-                        Used react and fastapi to display the products and allow to sort them
-                        by price per ml of ethanol. This project has been taken down as it encourages
-                        binge drinking and goes against the saq's robot.txt.
-                    </p>
                 </div>
-            </div>
-        </label>
 
-        <label for="project3rad">
-            <input type="radio" id="project3rad" name="selectedProject" />
-            <div class="projectCell" style="background-image: url('/static/images/project3.png');">
-                <h3 class="title">Drill hole pathfinder</h3>
-                <div class="context">
+                <p class="description">
+                    Scrapped the SAQ website to copy their inventory to a mongo database.
+                    Used react and fastapi to display the products and allow to sort them
+                    by price per ml of ethanol. This project has been taken down as it encourages
+                    binge drinking and goes against the saq's robot.txt.
+                </p>
+            </label>
+        </div>
+
+        <input type="radio" id="project3rad" name="selectedProject" />
+        <div class="projectCell" style="background-image: url('/static/images/project3.png');">
+            <label for="project3rad">
+                <div class="header">
+                    <h3 class="title">Drill hole pathfinder</h3>
                     <h4 class="compagny">Objectivity</h4>
-                    <p class="description">
-                        Used a genetic algorithm to determine the best possible path to reroute an
-                        already started horizontal directional drill hole to a new target.
-                    </p>
                 </div>
-            </div>
-        </label>
 
-        <label for="project4rad">
-            <input type="radio" id="project4rad" name="selectedProject" />
-            <div class="projectCell" style="background-image: url('/static/images/project4.png');">
-                <h3 class="title">Rover motor control</h3>
-                    <div class="context">
+                <p class="description">
+                    Used a genetic algorithm to determine the best possible path to reroute an
+                    already started horizontal directional drill hole to a new target.
+                </p>
+            </label>
+        </div>
+
+        <input type="radio" id="project4rad" name="selectedProject" />
+        <div class="projectCell" style="background-image: url('/static/images/project4.png');">
+            <label for="project4rad">
+                <div class="header">
+                    <h3 class="title">Rover motor control</h3>
                     <h4 class="compagny">Polyorbite Rover</h4>
-                    <p class="description">
-                        Used ROS to control motors and set a kill switch of a rover for my universities competitve rover.
-                    </p>
                 </div>
-            </div>
-        </label>
 
-        <label for="project5rad">
-            <input type="radio" id="project5rad" name="selectedProject" />
-            <div class="projectCell" style="background-image: url('/static/images/project5.png');">
-                <h3 class="title">3D 360 mine display</h3>
-                <div class="context">
-                    <h4 class="compagny">Kelly lake gold</h4>
-                    <p class="description">
-                        Used blender to showcase a mines plan in a 360 video accesible through
-                        Youtube.
-                    </p>
+                <p class="description">
+                    Used ROS to control motors and set a kill switch of a rover for my universities competitve
+                    rover.
+                </p>
+            </label>
+        </div>
+
+        <input type="radio" id="project5rad" name="selectedProject" />
+        <div class="projectCell" style="background-image: url('/static/images/project5.png');">
+            <label for="project5rad">
+                <div class="header">
+                    <h3 class="title">3D 360 mine display</h3>
+                    <h4 class="compagny">Kirkland lake gold</h4>
                 </div>
-            </div>
-        </label>
+
+                <p class="description">
+                    Used blender to showcase a mines plan in a 360 video accesible through
+                    Youtube.
+                </p>
+            </label>
+        </div>
     </div>
 
 </div>
 
+
+<script>
+    var ext = document.getElementById('signatureExtention');
+    var bike = document.getElementById('bike');
+    var rules = [
+        {
+            "element": ext,
+            "speed": 0.75,
+            "length": ext.getTotalLength(),
+        },
+        {
+            "element": bike,
+            "speed": 2,
+            "length": bike.getTotalLength(),
+        }
+    ];
+
+    var SD = document.getElementsByClassName('SD')[0];
+    var asys = document.getElementsByClassName('asys')[0];
+    const originalLength = ext.getTotalLength();
+    
+    document.addEventListener('scroll', () => {
+        var scrollPos = window.scrollY;
+        var complete = false;
+        document.documentElement.dataset.scroll = scrollPos;
+        
+        for (var i in rules) {
+            var rule = rules[i];
+            if (complete) {
+                rule['element'].style.strokeDashoffset = rule['length'];
+                // Makes every element after the partially drawn one hidden
+            }
+            else if (rule['speed'] * scrollPos > rule['length']) {
+                rule['element'].style.strokeDashoffset = 0;
+                scrollPos = scrollPos - (rule['length'] / rule['speed']);
+                // Draws the entire element
+            } else {
+                rule['element'].style.strokeDashoffset = rule['length'] - (rule['speed'] * scrollPos);
+                complete = true;
+                // Draws the element up until the scroll point
+            }
+        }
+
+        SD.style.strokeDashoffset = 0;
+        asys.style.strokeDashoffset = 0;
+    });
+
+    
+</script>
 {% endblock %}

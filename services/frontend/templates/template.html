@@ -41,28 +41,7 @@
         </div>
     </div>
 
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
-    <script>
-        var ext = document.getElementById('signatureExtention')
-        var SD = document.getElementsByClassName('SD')[0];
-        var asys = document.getElementsByClassName('asys')[0];
-        const originalLength = ext.getTotalLength();
-        
-        document.addEventListener('scroll', () => {
-            var scrollPos = window.scrollY;
-            document.documentElement.dataset.scroll = scrollPos;
-            var newlength = originalLength - (scrollPos / 2);
-            if (newlength <= 0) { newlength = 0; }
-            ext.style.strokeDashoffset = originalLength - (scrollPos / 2);
-
-            SD.style.strokeDashoffset = 0;
-            asys.style.strokeDashoffset = 0;
-        });
-
-        
-    </script>
+    {% block content %}{% endblock %}
     <!-- <script>
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
