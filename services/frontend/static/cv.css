@@ -7,7 +7,7 @@ div.page {
     display: grid;
     grid-template-areas: "header header"
     "left right";
-    grid-template-columns: auto 15rem;
+    grid-template-columns: 75% 25%;
 }
 
 br {
@@ -20,7 +20,8 @@ div.page > div {
 }
 
 div.page div.header {
-    background-color: navy;
+    background-color: #3c4d6d;
+    border-bottom: rgb(52, 122, 150) solid 2px;
     color: white;
     padding: 1rem 2rem;
     grid-area: header;
@@ -77,7 +78,7 @@ div.page div.right p {
 }
 
 div.page div.right {
-    background-color: gray;
+    background-color: #e0e0e0;
     grid-area: right;
     text-align: center;
 }
