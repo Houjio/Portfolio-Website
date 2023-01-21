@@ -34,28 +34,25 @@
 
 <div id="contentWrapper">
     <div class="aboutMe basewidth" id="aboutMe">
+        <h3>Welcome to my signature website</h3>
         <img src="/static/images/me.svg" alt="Picture of Sebastien Dasys" />
-        <h3 id="welcome">Welcome to my signature website</h3>
         <p>
-            Hello, my name is Sebastien Dasys and I am a mechanical engineering student curently bassed in Montreal.
-            I am a novice full stack developer. I've taken the course <a href="https://testdriven.io/courses/tdd-flask/"
-                style="color: blue;">"Test-Driven Development with Python, Flask, and Docker"</a>
-            by <a href="https://testdriven.io/" style="color: blue;">testdriven.io</a>. This taught me the FARM
-            (Fastapi, React, Mongo) stack but I've learned other stacks while working on various
-            projects; personal or otherwise. The website you're currently on uses Flask, Fastapi endpoints and a MySQL
-            database. Maybe a little overkill for a mostly static webpage, but this was built as a squelleton
-            for future applications. I also expermiented with avoiding Javascript in favor of css on this website, only
-            the scrolling effect on the signature
-            was done with Javascript. The project gallery that follows is entirely done with css including the "click
-            events".
-            <br><br>
-            If you would like to see the source code, head to my <a href="https://github.com/Houjio/Portfolio-Website"
-                style="color: blue;">Github</a>. You can run it from
-            your local machine very easily you have docker-compose installed (if you haven't already). The application
-            is dockerized to allow me to switch hosting service easily.
-            <br><br>
-            Unfortunetly, the source code for some of the projects I've worked on I do not own, so I can not share them with you. Please follow my signature to see a gallery
-            that compiles my favorite projects.
+            My name is Sebastien Dasys, and I'm a mechanical engineering student currently based in Montreal. I am a
+            budding full-stack developer with a few stacks in my tool belt such as the FARM (Fastapi, React, Mongo)
+            stack. I've taken the course <a class="link" href="https://testdriven.io/courses/tdd-flask/">"Test-Driven
+                Development with Python, Flask, and Docker"</a> by <a class="link"
+                href="https://testdriven.io/">testdriven.io</a> which
+            taught me the basics of full-stack development and that stack. I've also gained experience working with
+            other stacks, including Flask and MySQL, as demonstrated by this website you're currently viewing.
+            The project gallery that follows is entirely done with CSS, including the "click events." I also
+            experimented with avoiding JavaScript in favor of CSS on this website, with the exception of the scrolling
+            effect on the signature which was done with JavaScript. The website uses docker-compose to allow me to
+            switch hosting services easily. If you have docker-compose installed, you can easily host it yourself
+            locally!
+            If you're interested in the source code, you can head to my <a class="link"
+                href="https://github.com/Houjio/Portfolio-Website">Github</a> for more information.
+            Unfortunately, the source code for some of the projects I've worked on is not available for sharing. But
+            please follow my signature to see a gallery of my favorite projects.
         </p>
     </div>
 
@@ -73,11 +70,15 @@
                     <label for="project0input">
                         <h3>VTK mine visualizer</h3>
                         <h4>Objectivity</h4>
-                        <p>Built a page to compare exploration drill hole plans.
-                            I used plotly's Dash-VTK library to present the data
-                            on a 3D representation of the drill holes.
-                            A on-hover tool tip and on-click tables displayed relevant
-                            financial and geological data.</p>
+                        <ul>
+                            <li>Developed an interactive 3D VTK interface for displaying and exploring geological data
+                                from drill hole plans, featuring visualizations such as color gradients and side-by-side
+                                comparison of multiple plans to identify patterns and trends.
+                            </li>
+                            <li>Collaborated with a geological consulting company and used in two mining exploration
+                                projects, which helped to increase the efficiency and accuracy of their exploration
+                                process.</li>
+                        </ul>
                     </label>
                 </label>
             </div>
@@ -87,10 +88,14 @@
                     <label for="project0input">
                         <h3>SAQ scrapper and interface</h3>
                         <h4>Personal project</h4>
-                        <p> Scrapped the SAQ website to copy their inventory to a mongo database.
-                            Used react and fastapi to display the products and allow to sort them
-                            by price per ml of ethanol. This project has been taken down as it encourages
-                            binge drinking and goes against the saq's robot.txt.</p>
+                        <ul>
+                            <li>Built a web scraper to transfer the information of all 12 000 products the SAQ sells to
+                                a local MongoDB database</li>
+                            <li>Used FastAPI to create RESTful endpoints</li>
+                            <li>Developed a React interface to allow users to filter through products and find the
+                                cheapest alcohol relative to the quantity of ethanol</li>
+                            <li>Discontinued the project due to ethical implications</li>
+                        </ul>
                     </label>
                 </label>
             </div>
@@ -100,8 +105,13 @@
                     <label for="project0input">
                         <h3>Drill hole pathfinder</h3>
                         <h4>Objectivity</h4>
-                        <p>Used a genetic algorithm to determine the best possible path to reroute an
-                            already started horizontal directional drill hole to a new target.</p>
+                        <ul>
+                            <li>Developed a system that uses linear algebra and genetic neural networks to generate
+                                drilling plans to determine if it was worth continuing a hole that was off course.</li>
+                            <li>Applied horizontal directional drilling limitations to do pathfinding optimizing for
+                                hole pricing and distance from target
+                            </li>
+                        </ul>
                     </label>
 
                 </label>
@@ -112,8 +122,13 @@
                     <label for="project0input">
                         <h3>Rover motor control</h3>
                         <h4>Polyorbite Rover</h4>
-                        <p>Used ROS to control motors and set a kill switch of a rover for my universities competitve
-                            rover.</p>
+                        <ul>
+                            <li>Wrote code in ROS (Robot Operating System) for a kill switch and a code to control
+                                motors for a rover</li>
+                            <li>Collaborated with a team of students to design, build, and test the rover, which
+                                successfully competed in the Canadian Rover Challenge 2021 getting second place
+                            </li>
+                        </ul>
                     </label>
                 </label>
             </div>
@@ -123,8 +138,13 @@
                     <label for="project0input">
                         <h3>3D 360 mine display</h3>
                         <h4>Kirkland lake gold</h4>
-                        <p> Used blender to showcase a mines plan in a 360 video accesible through
-                            Youtube.</p>
+                        <ul>
+                            <li>Created a 3D, 360-degree animation using Blender for a company to showcase the geology
+                                and monetary value of a mine to potential clients</li>
+                            <li>Incorporated realistic geologic features and structures, as well as 360-degree camera
+                                movement for an interactive experience
+                            </li>
+                        </ul>
                     </label>
                 </label>
             </div>

@@ -1,3 +1,8 @@
+::selection {
+    color: black;
+    background: white;
+}
+
 div.bg,
 div.foregroud1,
 div.foregroud2,
@@ -164,24 +169,69 @@ div.aboutMe h3 {
     grid-area: title;
     width: 100%;
     font-size: 2rem;
+    text-align: justify;
+}
+
+div.aboutMe h3:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 div.aboutMe p {
     grid-area: text;
+    margin-top: 1rem;
+}
+
+div.aboutMe a.link {
+    color: #1f33e7;
+    text-decoration: underline;
+}
+
+/* Overly complex css to make h3 take up full width (just use js next time) */
+
+div.aboutMe h3  {
+    font-size: calc((100vw - 300px - 15rem) / 16 - 4px);
+    margin-bottom: calc((-100vw + 300px + 16.5rem) / 8);
+}
+
+@media only screen and (max-width: 1200px) {
+    div.aboutMe h3  {
+        font-size: calc((100vw - 200px - 15rem) / 16 - 4px);
+        margin-bottom: calc((-100vw + 200px + 16.5rem) / 8);
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    div.aboutMe h3  {
+        font-size: calc((100vw - 60px - 15rem) / 16 - 4px);
+        margin-bottom: calc((-100vw + 60px + 16.5rem) / 8);
+    }
 }
 
 @media only screen and (max-width: 800px),
 (orientation: portrait) and (max-width: 1800px) {
     div.aboutMe {
-        grid-template-areas: "title title"
-            "picture text";
-        grid-template-columns: 10rem auto;
+        display: block;
     }
 
     div.aboutMe h3 {
-        grid-area: title;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 9rem, calc(9vw - 35px));
+        margin-bottom: calc(-4.5vw - 17px + 1.5rem);
+    }
+
+    div.aboutMe img {
+        float: left;
+        width: 25%;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    div.aboutMe p {
+        text-align: justify;
     }
 
 }

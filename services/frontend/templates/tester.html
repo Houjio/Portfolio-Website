@@ -1,206 +1,42 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:800">
+
     <style>
         * {
             margin: 0;
         }
 
-        div.projects div.wrapper {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto);
-            overflow-x: hidden;
+        div.wrapper {
+            /* width: calc(150px + 30vmin); */
+            background-color: rebeccapurple;
+        }        
+
+        h3 {
+            /* font-size: calc(((150px + 30vmin) / 8) - 2px); */
+            font-size: calc(((100vw - 350px) / 15) - 2px);
+            text-align: center;
+            width: calc(100vw - 350px);
+            font-family: 'Lato';
+            width: auto;
         }
 
-        div.projects div.wrapper>div.projectCell {
-            width: 100%;
-            aspect-ratio: 1/1;
-            clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-            transition: width 0.5s, margin 0.5s;
-        }
-
-        div.projects div.wrapper>div.projectCell:nth-of-type(3) {
-            grid-column: 1 / span 2;
-            width: 50%;
-            margin: -8% 0% -8% 25%;
-        }
-
-        div.projects div.projectCell div.header {
-            width: 100%;
-            height: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        div.projects div.wrapper input[name='projectRad'] {
-            display: none;
-        }
-
-        div.projects div.wrapper>div.projectCell>label {
-            width: 100%;
-            height: 100%;
-            display: block;
-            cursor: pointer;
-        }
-
-        div.projects div.wrapper>div.projectCell>label>* {
-            opacity: 1;
-        }
-
-        div.projects label[for='project0input'] {
-            font-size: 1.2rem;
-            padding: 0.25rem 0.3rem;
-            cursor: pointer;
-            background-color: #44444444;
-        }
-
-        /* Fix hard coded option (would allow variable project size) */
-        /* Case 1 */
-        input#project1input:checked~div.projectCell {
-            margin-left: 75%;
-        }
-
-        input#project1input:checked~div.projectCell:nth-of-type(3) {
-            margin: -8% 0% -8% 63%;
-        }
-
-        input#project1input:checked~div.projectCell:nth-of-type(2) {
-            margin-top: 65%;
-        }
-
-
-        input#project1input:checked~div.projectCell:nth-of-type(1) {
-            width: 175%;
-            margin-bottom: -25%;
-            margin-left: 0;
-        }
-
-        input#project1input:checked~div.projectCell:nth-of-type(1)>label {
-            cursor: default;
-        }
-        /* Case 2 */
-
-        input#project2input:checked~div.projectCell {
-            margin-left: -75%
-        }
-
-        input#project2input:checked~div.projectCell:nth-of-type(3) {
-            margin: -6% 0% -8% -12.5%;
-        }
-
-        input#project2input:checked~div.projectCell:nth-of-type(1) {
-            margin-top: 65%;
-        }
-
-
-        input#project2input:checked~div.projectCell:nth-of-type(2) {
-            width: 175%;
-            margin-bottom: -12.25%;
-            margin-left: -75%;
-        }
-
-        input#project2input:checked~div.projectCell:nth-of-type(2)>label {
-            cursor: default;
-        }
-
-        /* Case 3 */
-
-        input#project3input:checked~div.projectCell:nth-of-type(3) {
-            width: 87.5%;
-            margin: -8% 0% -8% 6.25%;
-        }
-
-        input#project3input:checked~div.projectCell:nth-of-type(3)>label {
-            cursor: default;
-        }
-
-        /* Case 4 */
-
-        input#project4input:checked~div.projectCell {
-            margin-left: 75%;
-        }
-
-        input#project4input:checked~div.projectCell:nth-of-type(3) {
-            margin: -8% 0% -8% 63%;
-        }
-
-        input#project4input:checked~div.projectCell:nth-of-type(4) {
-            width: 175%;
-            margin-top: -25%;
-            margin-left: 0;
-        }
-
-        input#project4input:checked~div.projectCell:nth-of-type(4)>label {
-            cursor: default;
-        }
-
-        /* Case 5 */
-
-        input#project5input:checked~div.projectCell {
-            margin-left: -75%;
-        }
-
-        input#project5input:checked~div.projectCell:nth-of-type(3) {
-            margin: -8% 0% -8% -13%;
-        }
-
-
-        input#project5input:checked~div.projectCell:nth-of-type(5) {
-            width: 175%;
-            margin-top: -25%;
-        }
-
-        input#project5input:checked~div.projectCell:nth-of-type(5)>label {
-            cursor: default;
+        .ttt {
+            /* width: calc(150px + 30vmin); */
+            width: 1200px;
+            background-color: red;
         }
     </style>
 </head>
 
 <body>
-    <div class="projects basewidth" id="projects">
-        <div class="wrapper">
-            <input type="radio" name="projectRad" id="project0input" />
-            <input type="radio" name="projectRad" id="project1input" />
-            <input type="radio" name="projectRad" id="project2input" />
-            <input type="radio" name="projectRad" id="project3input" />
-            <input type="radio" name="projectRad" id="project4input" />
-            <input type="radio" name="projectRad" id="project5input" />
-
-            <div class="projectCell" style="background-image: url('/static/images/project1.png');">
-                <label for="project1input">
-                    <div class="header">
-                        <label for="project0input">X</label>
-                        <h3>VTK mine visualiser</h3>
-                    </div>
-                </label>
-            </div>
-
-            <div class="projectCell" style="background-image: url('/static/images/project3.png');">
-                <label for="project2input">
-                </label>
-            </div>
-
-            <div class="projectCell" style="background-image: url('/static/images/project2.png');">
-                <label for="project3input">
-                </label>
-            </div>
-
-            <div class="projectCell" style="background-image: url('/static/images/project4.png');">
-                <label for="project4input">
-                </label>
-            </div>
-
-            <div class="projectCell" style="background-image: url('/static/images/project5.png');">
-                <label for="project5input">
-                </label>
-            </div>
-        </div>
-    </div>
-
+<div class="wrapper">
+    <h3>Welcome to my signature website</h3>
+</div>
+<div class="ttt">
+    .
+</div>
 </body>
 
 </html>

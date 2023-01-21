@@ -1,8 +1,14 @@
 html {
-    font-size: calc(15px + 0.390625vmax);
+    font-size: calc(17px + 0.390625vmax);
     background-color: #202020;
     font-family: 'Lato';
     color: white;
+}
+
+@media only screen and (orientation: portrait) {
+    html {
+        font-size: calc(20px + 0.390625vmax);
+    }
 }
 
 * {
@@ -40,13 +46,13 @@ div#nav {
 }
 
 @media only screen and (max-width: 1200px) {
-    .basewidth{
+    .basewidth {
         padding: 0px 100px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    .basewidth{
+    .basewidth {
         padding: 0px 30px;
     }
 }
@@ -131,11 +137,12 @@ div#nav #pseudoHamburger:checked~label.hamburgerLabel path.bottom {
     transform: translate(-70px, 50px) rotate(-45deg);
 }
 
-@media only screen and (max-width: 800px), (orientation: portrait) and (max-width: 1800px) {
+@media only screen and (max-width: 800px),
+(orientation: portrait) and (max-width: 1800px) {
     div#nav {
         height: 5rem;
     }
-    
+
     div#nav label.hamburgerLabel {
         display: block;
     }

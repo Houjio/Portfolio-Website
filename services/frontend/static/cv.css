@@ -1,4 +1,5 @@
-div.page {
+div.page,
+div.coverLetter {
     margin-top: 150px;
     width: 100%;
     color: black;
@@ -8,6 +9,11 @@ div.page {
     grid-template-areas: "header header"
     "left right";
     grid-template-columns: 75% 25%;
+}
+
+div.coverLetter {
+    padding: 3rem 2rem;
+    box-sizing: border-box;
 }
 
 br {
