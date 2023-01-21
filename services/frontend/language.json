@@ -1,0 +1,259 @@
+{
+    "fr": {
+        "header": [
+            "À propos",
+            "Projets",
+            "CV",
+            "Lettre de couverture",
+            "EN"
+        ],
+        "aboutMe": {
+            "title": "Bienvenue! Voici mon site portfolio",
+            "altTxt": "Photo de Sebastien Dasys",
+            "text": "You gotta finish this my love"
+        },
+        "projects": [
+            {
+                "title": "Visualiseur de mine VTK",
+                "for": "Objectivity",
+                "bullets": [
+                    "Développé une interface 3D interactive avec la bibliothèque Dash VTK de Plotly pour afficher et explorer des données géologiques provenant de plans de forage, comprenant des visualisations telles que des gradients de couleurs et des comparaisons sur un même plan pour identifier des tendances façilité une décision.",
+                    "Collaboré avec une entreprise de consultation géologique pour être utilisé dans deux projets d'exploration minière, ce qui a aidé à augmenter l'efficacité et la précision de leur processus d'exploration"
+                ]
+            },
+            {
+                "title": "Scrapper SAQ et interface",
+                "for": "Personal project",
+                "bullets": [
+                    "Construit un outil de scraping web pour transférer les informations des 12 000 produits de la SAQ dans une base de données MongoDB locale",
+                    "Utilisé FastAPI pour créer des points d'extrémité RESTful",
+                    "Développé une interface React permettant aux utilisateurs de filtrer les produits et de trouver le produit alcoolique le moins cher par rapport à la quantité d'éthanol",
+                    "Projet abandonné en raison des implications éthiques"
+                ]
+            },
+            {
+                "title": "Pathfinder de trou de forage",
+                "for": "Objectivity",
+                "bullets": [
+                    "Développé un système utilisant l'algèbre linéaire et les réseaux de neurones génétiques pour générer des plans de forage afin de déterminer s'il était rentable de poursuivre un trou qui était hors de son parcours",
+                    "Appliqué les limitations de forage directionnel horizontal pour optimiser la recherche de chemin en termes de coût et de distance par rapport à la cible"
+                ]
+            },
+            {
+                "title": "Control de moteur de rover",
+                "for": "Polyorbite Rover",
+                "bullets": [
+                    "Écrit un code en ROS pour une commande d'arrêt d'urgence et un code pour contrôler les moteurs d'un rover",
+                    "Il a collaboré avec une équipe d'étudiants pour concevoir, construire et tester le rover, qui a participé avec succès à la Canadian Rover Challenge 2021 ce méritant la deuxième place"
+                ]
+            },
+            {
+                "title": "Visualization de mine 3D 360",
+                "for": "Kirkland lake gold",
+                "bullets": [
+                    "Created a 3D, 360-degree animation using Blender for a company to showcase the geology and monetary value of a mine to potential clients",
+                    "Incorporated realistic geologic features and structures, as well as 360-degree camera movement for an interactive experience"
+                ]
+            }
+        ],
+        "cv": {
+            "headers": [
+                "SOMMAIRE",
+                "ÉXPERIENCES",
+                "PROJETS",
+                "COMPETENCES",
+                "LANGUE",
+                "ÉDUCATION"
+            ],
+            "experiences": [
+                {
+                    "title": "Développeur full-stack",
+                    "header": "Objectivity | Été 2021 and 2022",
+                    "bullets": [
+                        "Développé et maintenu une série de microservices web, notamment les opérations CRUD pour une base de données MongoDB, un frontend React avec des hook RESTful via FastAPI",
+                        "Construit un visualiseur VTK 3D pour afficher des informations géologiques",
+                        "Implémenté des algorithmes de recherche de chemin en utilisant l'algèbre linéaire et les algorithmes génétiques pour déterminer si un trou de forage était intéressant à poursuivre lorsqu'il était hors de sa trajectoire",
+                        "Travaillé en équipe restreinte"
+                    ]
+                },
+                {
+                    "title": "Aide-enseignant",
+                    "header": "Polytechnique Montréal | Automne 2022 jusqu'à maintenant",
+                    "bullets": [
+                        "A participé activement à l'instruction du cours en aidant lors des séances de laboratoire et en répondant aux questions des étudiants",
+                        "A transmis les bases de Linux, de l'algèbre linéaire en Python, de SQL, de VBA et de PHP à plus de 60 étudiants",
+                        "A aidé les étudiants à comprendre les matériaux du cours, a fourni des exemples et des explications supplémentaires et a aidé les étudiants avec leurs devoirs",
+                        "A fourni des commentaires aux étudiants sur leur progression et les a aidés à identifier leurs points forts et leurs faiblesses"
+                    ]
+                },
+                {
+                    "title": "Tuteur",
+                    "header": "Travailleur indépendant | Travaileur indépendant 2021 et 2022",
+                    "bullets": [
+                        "A donné des cours particuliers aux élèves du secondaire et du CEGEP dans divers matières, notamment les sciences et les mathématiques",
+                        "A communiqué efficacement avec les clients et les parents pour établir des objectifs et des attentes clairs pour les séances de tutorat",
+                        "A développé et mis en œuvre des plans de leçon personnalisés pour répondre aux besoins et aux styles d'apprentissage spécifiques de chaque élève",
+                        "A vulgarisé les concepts scientifiques complexes pour les rendre accessibles et compréhensibles pour les élèves du CEGEP",
+                        "A maintenu un horaire serré et a tenu des dossiers précis des progrès et des réalisations des élèves"
+                    ]
+                }
+            ],
+            "skills": [
+                "Programmation Python",
+                "Développement web (Flask, FastAPI)",
+                "JavaScript (React)",
+                "Style CSS",
+                "Containerisation Docker",
+                "Hébergement cloud (AWS)",
+                "Gestion de bases de données (MongoDB, SQL)",
+                "Linux",
+                "Gestion de feuilles de calcul (Excel, VBA)",
+                "Modélisation 3D (Blender, VTK)",
+                "Dessin technique (Inkscape)"
+            ],
+            "languages": {
+                "fr": "Français",
+                "en": "Anglais",
+                "mastery": "Maîtrise",
+                "type": "Orale et écrit"
+            },
+            "education": "Génie Mecanique"
+        }
+    },
+    "en": {
+        "header": [
+            "About me",
+            "Projects",
+            "Resume",
+            "Cover letter",
+            "FR"
+        ],
+        "aboutMe": {
+            "title": "Welcome to my signature website",
+            "altTxt": "Photo of Sebastien Dasys",
+            "text": "My name is Sebastien Dasys, and I'm a mechanical engineering student currently based in Montreal. I am a
+            budding full-stack developer with a few stacks in my tool belt such as the FARM (Fastapi, React, Mongo)
+            stack. I've taken the course <a class=\"link\" href=\"https://testdriven.io/courses/tdd-flask/\">\"Test-Driven
+                Development with Python, Flask, and Docker\"</a> by <a class=\"link\"
+                href=\"https://testdriven.io/\">testdriven.io</a> which
+            taught me the basics of full-stack development and that stack. I've also gained experience working with
+            other stacks, including Flask and MySQL, as demonstrated by this website you're currently viewing.
+            The project gallery that follows is entirely done with CSS, including the click events. I also
+            experimented with avoiding JavaScript in favor of CSS on this website, with the exception of the scrolling
+            effect on the signature which was done with JavaScript. The website uses docker-compose to allow me to
+            switch hosting services easily. If you have docker-compose installed, you can easily host it yourself
+            locally!
+            If you're interested in the source code, you can head to my <a class=\"link\"
+                href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> for more information.
+            Unfortunately, the source code for some of the projects I've worked on is not available for sharing. But
+            please follow my signature to see a gallery of my favorite projects."
+        },
+        "projects": [
+            {
+                "title": "VTK mine visualizer",
+                "for": "Objectivity",
+                "bullets": [
+                    "Developed an interactive 3D VTK interface for displaying and exploring geological data from drill hole plans, featuring visualizations such as color gradients, on-hover tooltips, and side-by-side comparison of multiple plans to identify patterns and trends",
+                    "Collaborated with a geological consulting company to be used in two mining exploration projects, which helped to increase the efficiency and accuracy of their exploration process"
+                ]
+            },
+            {
+                "title": "SAQ scrapper and interface",
+                "for": "Personal project",
+                "bullets": [
+                    "Built a web scraper to transfer the information of all 12 000 products the SAQ sells to a local MongoDB database",
+                    "Used FastAPI to create RESTful endpoints",
+                    "Developed a React interface to allow users to filter through products and find the cheapest alcohol relative to the quantity of ethanol",
+                    "Discontinued the project due to ethical implications"
+                ]
+            },
+            {
+                "title": "Drill hole pathfinder",
+                "for": "Objectivity",
+                "bullets": [
+                    "Developed a system that uses linear algebra and genetic neural networks to generate drilling plans to determine if it was worth continuing a hole that was off course.",
+                    "Applied horizontal directional drilling limitations to do pathfinding optimizing for hole pricing and distance from target "
+                ]
+            },
+            {
+                "title": "Rover motor control",
+                "for": "Polyorbite Rover",
+                "bullets": [
+                    "Wrote code in ROS (Robot Operating System) for a kill switch and a code to control motors for a rover",
+                    "Collaborated with a team of students to design, build, and test the rover, which successfully competed in the Canadian Rover Challenge 2021 getting second place"
+                ]
+            },
+            {
+                "title": "3D 360 mine display",
+                "for": "Kirkland lake gold",
+                "bullets": [
+                    "Created a 3D, 360-degree animation using Blender for a company to showcase the geology and monetary value of a mine to potential clients",
+                    "Incorporated realistic geologic features and structures, as well as 360-degree camera movement for an interactive experience "
+                ]
+            }
+        ],
+        "cv": {
+            "headers": [
+                "SUMARRY",
+                "EXPERIENCES",
+                "PROJECTS",
+                "SKILLS",
+                "LANGUAGE",
+                "EDUCATION"
+            ],
+            "experiences": [
+                {
+                    "title": "Full stack dev",
+                    "header": "Objectivity | summer 2021 and 2022",
+                    "bullets": [
+                        "Developed and maintained a range of web-based microservices including CRUD operations for a MongoDB, a React frontend with RESTful hooks through FastApi",
+                        "Built a 3D VTK visualizer to display geological information",
+                        "Implemented pathfinding algorithms using linear algebra and genetic algorithms to determine if a drill hole was worthwhile pursuing when it was of course",
+                        "Worked in a small team"
+                    ]
+                },
+                {
+                    "title": "Teachers Assistant",
+                    "header": "Polytechnique Montréal | fall 2022 to present",
+                    "bullets": [
+                        "Actively participated in the instruction of the course MEC1315 by assisting during lab sessions and answering student questions",
+                        "Conveyed the basics of Linux, linear algebra in Python, SQL, VBA, and PHP to 60+ students",
+                        "Assisted students in their understanding of course materials, provided additional examples and explanations, and helped students with their assignments",
+                        "Provided feedback to the students on their progress, and helped them identify their strengths and weaknesses"
+                    ]
+                },
+                {
+                    "title": "Tutor",
+                    "header": "Self Employed | 2021 and 2022 School year",
+                    "bullets": [
+                        "Tutored high school and CEGEP students in various subjects, including science and mathematics",
+                        "Communicated effectively with clients and parents to establish clear goals and expectations for the tutoring sessions",
+                        "Developed and implemented personalized lesson plans to meet the specific needs and learning styles of each student",
+                        "Simplified complex scientific concepts to make them accessible and understandable for CEGEP students",
+                        "Maintained a tight schedule and kept accurate records of student progress and achievement"
+                    ]
+                }
+            ],
+            "skills": [
+                "Python programming",
+                "Web development (Flask, FastAPI)",
+                "JavaScript (React)",
+                "CSS styling",
+                "Docker containerization",
+                "Cloud hosting (AWS)",
+                "Database management (MongoDB, SQL)",
+                "Linux",
+                "Spreadsheet management (Excel, VBA)",
+                "3D modeling (Blender, VTK)",
+                "Technical drawing (Inkscape)"
+            ],
+            "languages": {
+                "fr": "French",
+                "en": "English",
+                "mastery": "Native proficiency",
+                "type": "Spoken and written"
+            },
+            "education": "Mechanical Engineering"
+        }
+    }
+}
