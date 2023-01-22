@@ -4,7 +4,7 @@
             "À propos",
             "Projets",
             "CV",
-            "Lettre de couverture",
+            "lettre de motivation",
             "EN"
         ],
         "aboutMe": {
@@ -156,26 +156,27 @@
             "FR"
         ],
         "aboutMe": {
-            "title": "Welcome to my signature website",
+            "title": "Welcome to my Signature Website",
             "altTxt": "Photo of Sebastien Dasys",
             "text": "My name is Sebastien Dasys, and I'm a mechanical engineering student currently based in Montreal. I am a
-            budding full-stack developer with a few stacks in my tool belt such as the FARM (Fastapi, React, Mongo)
+            budding full-stack developer with experience with the FARM (Fastapi, React, Mongo)
             stack. I've taken the course <a class=\"link\" href=\"https://testdriven.io/courses/tdd-flask/\">\"Test-Driven
                 Development with Python, Flask, and Docker\"</a> by <a class=\"link\"
                 href=\"https://testdriven.io/\">testdriven.io</a> which
-            taught me the basics of full-stack development and that stack. I've also gained experience working with
+            taught me the basics of full-stack development. I've also gained experience working with
             other stacks, including Flask and MySQL, as demonstrated by this website you're currently viewing.
             <br /><br />
-            The project gallery that follows is entirely done with CSS, including the click events. I also
+            I also
             experimented with avoiding JavaScript in favor of CSS on this website, with the exception of the scrolling
-            effect on the signature which was done with JavaScript. The website uses docker-compose to allow me to
-            switch hosting services easily. If you have docker-compose installed, you can easily host it yourself
+            effect on the signature. The project gallery that follows is entirely done with CSS, including the click events. 
+            The website uses docker-compose to allow me to
+            switch hosting services seamlessy. If you have docker-compose installed, you can easily host it yourself
             locally!
             <br /><br />
             If you're interested in the source code, you can head to my <a class=\"link\"
                 href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> for more information.
-            Unfortunately, the source code for some of the projects I've worked on is not available for sharing. But
-            please follow my signature to see a gallery of my favorite projects."
+            Unfortunately, the source code for some of the projects I've worked on are not available for sharing. 
+            Please follow my signature to see a gallery of my favorite projects."
         },
         "projects": [
             {

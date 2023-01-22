@@ -57,22 +57,23 @@ div.projects div.projectCell label[for="project0input"] {
 }
 
 div.projects div.projectCell label[for="project0input"] h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.15rem;
 }
 
 div.projects div.projectCell label[for="project0input"] h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
 }
 
-div.projects div.projectCell label[for="project0input"] p {
-    text-align: center;
+div.projects div.projectCell label[for="project0input"] li {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
 }
 
 @media only screen and (orientation: landscape) {
     div.projects div.wrapper {
-        width: 60%;
+        width: 80%;
     }
 }
 

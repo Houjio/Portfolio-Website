@@ -8,11 +8,21 @@ div.coverLetter {
     display: grid;
     grid-template-areas: "header header"
     "left right";
-    grid-template-columns: 75% 25%;
+    grid-template-columns: auto 30%;
+}
+
+@media only screen and (max-width: 800px),
+(orientation: portrait) and (max-width: 1800px) {
+    div.coverLetter {
+        grid-template-areas: "header header"
+       "left left",
+       "right right";
+    }
+
 }
 
 div.coverLetter {
-    padding: 3rem 2rem;
+    padding: 1.5rem 1rem;
     box-sizing: border-box;
 }
 
