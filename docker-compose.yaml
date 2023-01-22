@@ -9,7 +9,7 @@ services:
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
-      # TODO bind to enviroment variables
+      # bind to enviroment variables
     ports:
       - '3306:3306'
     volumes:

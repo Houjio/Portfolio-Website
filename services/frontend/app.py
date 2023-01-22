@@ -1,8 +1,14 @@
 from flask import Flask, render_template, make_response, request, redirect
+from werkzeug.middleware.proxy_fix import ProxyFix
+
 import requests
 from json import loads
 
 app = Flask(__name__)
+
+app.wsgi_app = ProxyFix(
+    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+)
 
 with open("language.json", 'r') as language_file:
     LANGUAGE = loads(language_file.read(), strict=False)
@@ -14,11 +20,11 @@ def verify_key(cookies: dict, input: bool = False):
         error = "No key was submited" if input else ""
         return render_template('no_key.html', error=error), None
 
-    url = f"http://192.168.111.10:8080/acess/{key}"
+    url = f"http://192.168.111.10:8080/access/{key}"
     r = requests.get(url)
 
     if r.status_code == 404:
-        error = "Your acess key is invalid" if input else ""
+        error = "Your access key is invalid" if input else ""
         return render_template('no_key.html', error=error), None
 
     resp = loads(r.content)
@@ -48,22 +54,22 @@ def setKey():
     if not isinstance(resp, dict):  # it is invalid valid
         return resp
 
-    sucess = make_response(redirect("/"))
-    sucess.set_cookie('key', cookie['key'])
+    success = make_response(redirect("/"))
+    success.set_cookie('key', cookie['key'])
 
     language = "french" if resp.get("french") else "english"
-    sucess.set_cookie('lang', language)
+    success.set_cookie('lang', language)
 
-    return sucess
+    return success
 
 @app.route('/lang', methods=['GET'])
 def setLanguage():
     current_language = request.cookies.get('lang')
-    sucess = make_response(redirect("/"))
+    success = make_response(redirect("/"))
     language = "french" if current_language == "english" else "english"
-    sucess.set_cookie('lang', language)
+    success.set_cookie('lang', language)
 
-    return sucess
+    return success
 
 
 @app.route('/cv')
@@ -73,7 +79,7 @@ def cv():
     if not isinstance(resp, dict):  # it is invalid valid
         return resp
 
-    return render_template("cv.html", wording=wording)
+    return render_template("cv.html", wording=wording, jobType=resp.get("jobType"))
 
 
 @app.route('/coverletter')

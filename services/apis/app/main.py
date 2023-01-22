@@ -3,7 +3,6 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 from . import models, crud
-# from . import models, schemas, crud
 
 from .database import SessionLocal, engine
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# CORS Acess
+# CORS Access
 
 origins = [
     "http://0.0.0.0",
@@ -45,38 +44,38 @@ def ping():
     return {"ping": "pong"}
 
 
-@app.post("/acess/", response_model=models.PydanticAcess)
-def create_one_acess(acess: models.PydanticAcess, db: Session = Depends(get_db)):
-    return crud.create_acess(db=db, acess=acess)
+@app.post("/access/", response_model=models.PydanticAccess)
+def create_one_access(access: models.PydanticAccess, db: Session = Depends(get_db)):
+    return crud.create_access(db=db, access=access)
 
 
-@app.get("/acess/", response_model=List[models.PydanticAcess])
-def read_all_acess(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    acess = crud.get_acess_plural(db, skip=skip, limit=limit)
-    return [models.PydanticAcess.from_orm(a) for a in acess]
+@app.get("/access/", response_model=List[models.PydanticAccess])
+def read_all_access(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    access = crud.get_access_plural(db, skip=skip, limit=limit)
+    return [models.PydanticAccess.from_orm(a) for a in access]
 
 
-@app.get("/acess/{code}", response_model=models.PydanticAcess)
-def read_acess(code: int, db: Session = Depends(get_db)):
-    db_acess = crud.get_acess(db, code=code)
-    if db_acess is None:
-        raise HTTPException(status_code=404, detail="Acess not found")
-    return models.PydanticAcess.from_orm(db_acess)
+@app.get("/access/{code}", response_model=models.PydanticAccess)
+def read_access(code: int, db: Session = Depends(get_db)):
+    db_access = crud.get_access(db, code=code)
+    if db_access is None:
+        raise HTTPException(status_code=404, detail="Access not found")
+    return models.PydanticAccess.from_orm(db_access)
 
 
-@app.patch("/acess/{code}", response_model=models.PydanticAcess)
-def update_acess(code: int, acessUpdate: models.AcessUpdate,  db: Session = Depends(get_db)):
-    db_acess = crud.get_acess(db, code=code)
-    if db_acess is None:
-        raise HTTPException(status_code=404, detail="Acess not found")
+@app.patch("/access/{code}", response_model=models.PydanticAccess)
+def update_access(code: int, accessUpdate: models.AccessUpdate,  db: Session = Depends(get_db)):
+    db_access = crud.get_access(db, code=code)
+    if db_access is None:
+        raise HTTPException(status_code=404, detail="Access not found")
 
-    return crud.update_product(db, db_acess, acessUpdate)
+    return crud.update_product(db, db_access, accessUpdate)
 
 
-@app.delete("/acess/{code}")
-def update_acess(code: int, db: Session = Depends(get_db)):
-    db_acess = crud.get_acess(db, code=code)
-    if db_acess is None:
-        raise HTTPException(status_code=404, detail="Acess not found")
+@app.delete("/access/{code}")
+def update_access(code: int, db: Session = Depends(get_db)):
+    db_access = crud.get_access(db, code=code)
+    if db_access is None:
+        raise HTTPException(status_code=404, detail="Access not found")
 
-    return crud.delete_product(db, db_acess)
+    return crud.delete_product(db, db_access)

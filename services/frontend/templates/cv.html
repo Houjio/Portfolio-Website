@@ -16,8 +16,9 @@
         <div class="left">
             <h3>{{ wording['cv']['headers'][0] }}</h3>
             <ul>
-                <li>Spent three years developing webapps</li>
-                <li>Knows the basics of a wide range of stacks</li>
+                {% for bullet in wording['cv']['summary'][jobType] %}
+                    <li>{{ bullet }}</li>
+                {% endfor %}
             </ul>
 
 
@@ -32,25 +33,16 @@
             </ul>
             {% endfor %}
 
-            <h3>{{ wording['cv']['headers'][2] }}</h3>
-            
-            <h4>SAQ</h4>
-            <h5>SAQ <span>| summer 2021 and 2022</span></h5>
-            <ul>
-                <li>SAQ a range of SAQ from crud's for databases, a react frontend to restful hooks.</li>
-                <li>SAQ a VTK SAQ to display geological information</li>
-                <li>SAQ linear algebra and SAQ algorithms to find the optimal path to a target from a predefined spline with contraints</li>
-            </ul>
 
         </div>
         <div class="right">
-            <h4>{{ wording['cv']['headers'][3] }}</h4>
+            <h4>{{ wording['cv']['headers'][2] }}</h4>
             {% for bullet in wording['cv']['skills'] %}
                 <p>{{ bullet }}</p>
             {% endfor %}
             <br><br>
 
-            <h4>{{ wording['cv']['headers'][4] }}</h4>
+            <h4>{{ wording['cv']['headers'][3] }}</h4>
             <p>{{ wording['cv']['languages']['fr'] }}</p>
             <p style="font-weight: 200;">{{ wording['cv']['languages']['mastery'] }}</p>
             <p>{{ wording['cv']['languages']['type'] }}</p>
@@ -61,7 +53,7 @@
 
             <br>
 
-            <h4>{{ wording['cv']['headers'][5] }}</h4>
+            <h4>{{ wording['cv']['headers'][4] }}</h4>
             <p>Polytechnique Montréal</p>
             <p style="font-weight: 200;">{{ wording['cv']['education'] }}</p>
             <p>2020-2025</p>

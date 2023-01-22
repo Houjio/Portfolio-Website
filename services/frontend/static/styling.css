@@ -78,8 +78,9 @@ div#nav div.navButtons {
     height: 100%;
 }
 
-div#nav div.navButtons button {
+div#nav div.navButtons a {
     border: none;
+    text-align: center;
     height: 100%;
     padding: 20px 15px;
     font-size: 1.1rem;
@@ -87,7 +88,7 @@ div#nav div.navButtons button {
     transition: background-color 500ms, font-size 0.5s;
 }
 
-div#nav div.navButtons button:hover {
+div#nav div.navButtons a:hover {
     background-color: #33333377;
 }
 
@@ -100,7 +101,7 @@ html:not([data-scroll='0']) div#nav h1 {
     font-size: 1.25rem;
 }
 
-html:not([data-scroll='0']) div#nav div.navButtons button {
+html:not([data-scroll='0']) div#nav div.navButtons a {
     font-size: 1rem;
     padding: 11px 15px;
 }
@@ -164,7 +165,7 @@ div#nav #pseudoHamburger:checked~label.hamburgerLabel path.bottom {
         top: 2.35rem;
     }
 
-    div#nav div.navButtons button {
+    div#nav div.navButtons a {
         padding: 1rem 1.2rem;
         background-color: #333333e0;
         width: 100%;
@@ -172,7 +173,7 @@ div#nav #pseudoHamburger:checked~label.hamburgerLabel path.bottom {
         border-radius: 1px;
     }
 
-    div#nav div.navButtons button:hover {
+    div#nav div.navButtons a:hover {
         background-color: #222222ee;
     }
 

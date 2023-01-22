@@ -10,7 +10,18 @@
         "aboutMe": {
             "title": "Bienvenue! Voici mon site portfolio",
             "altTxt": "Photo de Sebastien Dasys",
-            "text": "You gotta finish this my love"
+            "text": "Je m'appelle Sébastien Dasys et je suis étudiant en génie mécanique à Montréal.
+            Je suis un développeur full-stack novice avec qui connais quelques stacks techniques tel que FARM (Fastapi, React, Mongo).
+            J'ai suivi le cours  <a class=\"link\" href=\"https://testdriven.io/courses/tdd-flask/\">\"Test-Driven Development with Python, Flask, and Docker\"</a>
+            de  <a class=\"link\" href=\"https://testdriven.io/\">testdriven.io</a> qui m'a appris les bases du développement 
+            full-stack. J'ai également acquis de l'expérience avec d'autres stacks, comme Flask et MySQL.
+            Vous pouvez le témoigner sur le site web sur lequel vous êtes actuellement. <br/><br/>La galerie de projets qui suit est entièrement réalisée en CSS, y compris les événements de clic. 
+            J’ai essayé d’évité d’utiliser Javascript comme expérience sur ce site et j’ai réussi à l'exception des événements “scroll”.
+            Le site web utilise docker-compose pour me permettre de changer facilement de service d'hébergement. 
+            Si vous avez docker-compose installé, vous pouvez facilement l'héberger vous-même sur votre post! <br><br>
+            Si vous êtes intéressé par le code source, vous pouvez vous rendre sur mon <a class=\"link\" href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> 
+            pour plus d'informations. Malheureusement, le code source de certains des projets sur lesquels j'ai travaillé n'est pas disponible vu qu’il ne m'appartient pas. 
+            Veuillez suivre ma signature pour voir une galerie de mes projets préférés."
         },
         "projects": [
             {
@@ -60,10 +71,26 @@
             "headers": [
                 "SOMMAIRE",
                 "ÉXPERIENCES",
-                "PROJETS",
                 "COMPETENCES",
                 "LANGUE",
                 "ÉDUCATION"
+            ],
+            "summary": [
+                [
+                    "Étudiant en génie mécanique avec une oeuil pour le détail avec de expérience l'experience en programmation et en analyse de données",
+                    "Strong understanding of mechanical systems and principles, gained through coursework and self-study",
+                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
+                    "Strong problem-solving skills and ability to work independently and in a team"
+                ],
+                [
+                    "Experienced mechanical engineering student with skills in full stack development and data analysis",
+                    "Proven ability to work independently and apply technical knowledge to improve processes and solve problems",
+                    "Strong hability to work in teams and keep documentation updated"
+                ], [
+                    "Skilled in data analysis and visualization using Python libraries such as Pandas, Plotly, Numpy, and Matplotlib",
+                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
+                    "Able to communicate findings and recommendations to both technical and non-technical audiences"
+                ]
             ],
             "experiences": [
                 {
@@ -138,11 +165,13 @@
                 href=\"https://testdriven.io/\">testdriven.io</a> which
             taught me the basics of full-stack development and that stack. I've also gained experience working with
             other stacks, including Flask and MySQL, as demonstrated by this website you're currently viewing.
+            <br /><br />
             The project gallery that follows is entirely done with CSS, including the click events. I also
             experimented with avoiding JavaScript in favor of CSS on this website, with the exception of the scrolling
             effect on the signature which was done with JavaScript. The website uses docker-compose to allow me to
             switch hosting services easily. If you have docker-compose installed, you can easily host it yourself
             locally!
+            <br /><br />
             If you're interested in the source code, you can head to my <a class=\"link\"
                 href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> for more information.
             Unfortunately, the source code for some of the projects I've worked on is not available for sharing. But
@@ -200,6 +229,22 @@
                 "SKILLS",
                 "LANGUAGE",
                 "EDUCATION"
+            ], "summary": [
+                [
+                    "Detail-oriented mechanical engineering student with experience in coding and data analysis",
+                    "Strong understanding of mechanical systems and principles, gained through coursework and self-study",
+                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
+                    "Strong problem-solving skills and ability to work independently and in a team"
+                ],
+                [
+                    "Experienced mechanical engineering student with skills in full stack development and data analysis",
+                    "Proven ability to work independently and apply technical knowledge to improve processes and solve problems",
+                    "Strong hability to work in teams and keep documentation updated"
+                ], [
+                    "Skilled in data analysis and visualization using Python libraries such as Pandas, Plotly, Numpy, and Matplotlib",
+                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
+                    "Able to communicate findings and recommendations to both technical and non-technical audiences"
+                ]
             ],
             "experiences": [
                 {
