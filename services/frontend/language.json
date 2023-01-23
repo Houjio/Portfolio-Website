@@ -4,41 +4,44 @@
             "À propos",
             "Projets",
             "CV",
-            "lettre de motivation",
+            "Lettre de motivation",
             "EN"
         ],
         "aboutMe": {
             "title": "Bienvenue! Voici mon site portfolio",
             "altTxt": "Photo de Sebastien Dasys",
             "text": "Je m'appelle Sébastien Dasys et je suis étudiant en génie mécanique à Montréal.
-            Je suis un développeur full-stack novice avec qui connais quelques stacks techniques tel que FARM (Fastapi, React, Mongo).
-            J'ai suivi le cours  <a class=\"link\" href=\"https://testdriven.io/courses/tdd-flask/\">\"Test-Driven Development with Python, Flask, and Docker\"</a>
+            Je suis un développeur full-stack novice qui se sert souvent du stack FARM (Fastapi, React, Mongo).
+            Le cours  <a class=\"link\" href=\"https://testdriven.io/courses/tdd-flask/\">\"Test-Driven Development with Python, Flask, and Docker\"</a>
             de  <a class=\"link\" href=\"https://testdriven.io/\">testdriven.io</a> qui m'a appris les bases du développement 
-            full-stack. J'ai également acquis de l'expérience avec d'autres stacks, comme Flask et MySQL.
-            Vous pouvez le témoigner sur le site web sur lequel vous êtes actuellement. <br/><br/>La galerie de projets qui suit est entièrement réalisée en CSS, y compris les événements de clic. 
-            J’ai essayé d’évité d’utiliser Javascript comme expérience sur ce site et j’ai réussi à l'exception des événements “scroll”.
+            full-stack, puis j'ai acquis des compétences en utilisant d'autres stacks, tels Flask et MySQL.
+            Le site web que vous lisez actuellement en est un témoignage. 
+            <br/><br/>
+            Comme défi, j’ai essayé d’éviter l'utilisation de Javascript en construisant ce site. 
+            Tout, à l'exception de l'effet de la signature déroulante, a été fait à base de CSS, y compris la galerie de projets qui suit et les \"click events\".
             Le site web utilise docker-compose pour me permettre de changer facilement de service d'hébergement. 
-            Si vous avez docker-compose installé, vous pouvez facilement l'héberger vous-même sur votre post! <br><br>
-            Si vous êtes intéressé par le code source, vous pouvez vous rendre sur mon <a class=\"link\" href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> 
-            pour plus d'informations. Malheureusement, le code source de certains des projets sur lesquels j'ai travaillé n'est pas disponible vu qu’il ne m'appartient pas. 
-            Veuillez suivre ma signature pour voir une galerie de mes projets préférés."
+            Si vous avez installer docker-compose, je vous invite à essayer de le lancer vous-même!
+            <br><br>
+            Si vous êtes intéressés par le code source, vous pouvez vous rendre sur mon <a class=\"link\" href=\"https://github.com/Houjio/Portfolio-Website\">Github</a> 
+            pour plus d'informations. Malheureusement, le code source de certains des projets sur lesquels j'ai travaillé n'est pas disponible puisqu'il ne m'appartient pas. 
+            Veuillez suivre ma signature pour voir la galerie de mes projets préférés."
         },
         "projects": [
             {
                 "title": "Visualiseur de mine VTK",
                 "for": "Objectivity",
                 "bullets": [
-                    "Développé une interface 3D interactive avec la bibliothèque Dash VTK de Plotly pour afficher et explorer des données géologiques provenant de plans de forage, comprenant des visualisations telles que des gradients de couleurs et des comparaisons sur un même plan pour identifier des tendances façilité une décision.",
-                    "Collaboré avec une entreprise de consultation géologique pour être utilisé dans deux projets d'exploration minière, ce qui a aidé à augmenter l'efficacité et la précision de leur processus d'exploration"
+                    "Ai développé une interface 3D interactive avec la bibliothèque Dash VTK de Plotly pour afficher et explorer des données géologiques provenant de plans de forage, comprenant des visualisations telles que des gradients de couleurs afin de comparé des plans de trous de forage",
+                    "Ai collaboré avec une entreprise de consultation géologique, ce qui a aidé à augmenter l'efficacité et la précision de leur processus d'exploration pour deux mines"
                 ]
             },
             {
                 "title": "Scrapper SAQ et interface",
-                "for": "Personal project",
+                "for": "Projet personnel",
                 "bullets": [
-                    "Construit un outil de scraping web pour transférer les informations des 12 000 produits de la SAQ dans une base de données MongoDB locale",
-                    "Utilisé FastAPI pour créer des points d'extrémité RESTful",
-                    "Développé une interface React permettant aux utilisateurs de filtrer les produits et de trouver le produit alcoolique le moins cher par rapport à la quantité d'éthanol",
+                    "Ai construit un outil de scraping web pour transférer les informations des 12 000 produits de la SAQ dans une base de données MongoDB locale",
+                    "Ai utilisé FastAPI pour créer des points d'extrémité RESTful",
+                    "Ai développé une interface React permettant aux utilisateurs de filtrer les produits et de trouver le produit alcoolique le moins cher par rapport à la quantité d'éthanol",
                     "Projet abandonné en raison des implications éthiques"
                 ]
             },
@@ -46,24 +49,24 @@
                 "title": "Pathfinder de trou de forage",
                 "for": "Objectivity",
                 "bullets": [
-                    "Développé un système utilisant l'algèbre linéaire et les réseaux de neurones génétiques pour générer des plans de forage afin de déterminer s'il était rentable de poursuivre un trou qui était hors de son parcours",
-                    "Appliqué les limitations de forage directionnel horizontal pour optimiser la recherche de chemin en termes de coût et de distance par rapport à la cible"
+                    "Ai développé un système utilisant l'algèbre linéaire et des réseaux de neurones génétiques pour générer des plans de forage afin de déterminer s'il était rentable de poursuivre un trou qui était hors parcours",
+                    "Ai appliqué les règles du forage directionnel horizontal pour optimiser la recherche de chemin de forage en termes de coût et de distance par rapport à une cible"
                 ]
             },
             {
                 "title": "Control de moteur de rover",
                 "for": "Polyorbite Rover",
                 "bullets": [
-                    "Écrit un code en ROS pour une commande d'arrêt d'urgence et un code pour contrôler les moteurs d'un rover",
-                    "Il a collaboré avec une équipe d'étudiants pour concevoir, construire et tester le rover, qui a participé avec succès à la Canadian Rover Challenge 2021 ce méritant la deuxième place"
+                    "Ai écrit un code en ROS pour une commande d'arrêt d'urgence et un code pour contrôler les moteurs d'un rover",
+                    "Ai collaboré avec une équipe d'étudiants pour concevoir, construire et tester un rover, qui s'est mérité la deuxième place aux \"Canadian Rover Challenge\" 2021"
                 ]
             },
             {
                 "title": "Visualization de mine 3D 360",
                 "for": "Kirkland lake gold",
                 "bullets": [
-                    "Created a 3D, 360-degree animation using Blender for a company to showcase the geology and monetary value of a mine to potential clients",
-                    "Incorporated realistic geologic features and structures, as well as 360-degree camera movement for an interactive experience"
+                    "Ai créé une animation 3D à 360 degrés à l'aide de Blender pour une entreprise afin de présenter la géologie et la valeur monétaire d'une mine aux clients potentiels",
+                    "Ai inclus des caractéristiques géologiques et des structures, ainsi qu'un mouvement de caméra à 360 degrés pour une expérience interactive"
                 ]
             }
         ],
@@ -77,19 +80,19 @@
             ],
             "summary": [
                 [
-                    "Étudiant en génie mécanique avec une oeuil pour le détail avec de expérience l'experience en programmation et en analyse de données",
-                    "Strong understanding of mechanical systems and principles, gained through coursework and self-study",
-                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
-                    "Strong problem-solving skills and ability to work independently and in a team"
+                    "Étudiant en génie mécanique avec une oeuil pour le détail et de l'experience en programmation et en analyse de données",
+                    "Bonne compréhension des systèmes et des principes mécaniques, acquise grâce aux cours et à l'apprentissage personnel",
+                    "Expérience avec application de connaissances techniques trouvé dans des documents scientifiques à des cas concrets",
+                    "Forte compétences en résolution de problèmes et capacité de travailler de manière autonome et en équipe"
                 ],
                 [
-                    "Experienced mechanical engineering student with skills in full stack development and data analysis",
-                    "Proven ability to work independently and apply technical knowledge to improve processes and solve problems",
-                    "Strong hability to work in teams and keep documentation updated"
+                    "Étudiant en génie mécanique avec une oeuil pour le détail et de l'experience en programmation et en analyse de données",
+                    "Aptitude avérée à travailler de manière autonome et à appliquer des connaissances techniques pour améliorer les processus et résoudre les problèmes",
+                    "Forte capacité de travailler en équipe et à garder la documentation à jour"
                 ], [
-                    "Skilled in data analysis and visualization using Python libraries such as Pandas, Plotly, Numpy, and Matplotlib",
-                    "Experience in applying technical knowledge from research papers to code, demonstrated through projects in areas such as drill hole pathfinding",
-                    "Able to communicate findings and recommendations to both technical and non-technical audiences"
+                    "Compétences en analyse et visualisation de données à l'aide de bibliothèques Python telles que Pandas, Plotly, Numpy et Matplotlib",
+                    "Expérience avec application de connaissances techniques trouvé dans des documents scientifiques à des cas concrets",
+                    "Capable de vulgarisé des informations complexes pour des publics techniques et non techniques"
                 ]
             ],
             "experiences": [
@@ -115,10 +118,10 @@
                 },
                 {
                     "title": "Tuteur",
-                    "header": "Travailleur indépendant | Travaileur indépendant 2021 et 2022",
+                    "header": "Travailleur indépendant | Année scolaire 2021 et 2022",
                     "bullets": [
                         "A donné des cours particuliers aux élèves du secondaire et du CEGEP dans divers matières, notamment les sciences et les mathématiques",
-                        "A communiqué efficacement avec les clients et les parents pour établir des objectifs et des attentes clairs pour les séances de tutorat",
+                        "A communiqué efficacement avec les clients et les parents pour établir des objectifs et des attentes clairs pour leurs séances de tutorat",
                         "A développé et mis en œuvre des plans de leçon personnalisés pour répondre aux besoins et aux styles d'apprentissage spécifiques de chaque élève",
                         "A vulgarisé les concepts scientifiques complexes pour les rendre accessibles et compréhensibles pour les élèves du CEGEP",
                         "A maintenu un horaire serré et a tenu des dossiers précis des progrès et des réalisations des élèves"
@@ -218,7 +221,7 @@
                 "for": "Kirkland lake gold",
                 "bullets": [
                     "Created a 3D, 360-degree animation using Blender for a company to showcase the geology and monetary value of a mine to potential clients",
-                    "Incorporated realistic geologic features and structures, as well as 360-degree camera movement for an interactive experience "
+                    "Incorporated geologic features and structures, as well as 360-degree camera movement for an interactive experience "
                 ]
             }
         ],
