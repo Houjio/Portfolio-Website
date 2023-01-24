@@ -80,19 +80,20 @@
             ],
             "summary": [
                 [
-                    "Étudiant en génie mécanique avec une oeuil pour le détail et de l'experience en programmation et en analyse de données",
-                    "Bonne compréhension des systèmes et des principes mécaniques, acquise grâce aux cours et à l'apprentissage personnel",
-                    "Expérience avec application de connaissances techniques trouvé dans des documents scientifiques à des cas concrets",
-                    "Forte compétences en résolution de problèmes et capacité de travailler de manière autonome et en équipe"
+                    "Étudiant en génie mécanique avec d’importantes connaissance en programmation et en analyse de données",
+                    "Bonne compréhension des systèmes et des principes mécaniques, grâce aux cours et à l'apprentissage personnel",
+                    "Bonnes connaissances techniques, émanant de documents scientifiques, avec applications concrètes de celles-ci",
+                    "Forte compétences en résolution de problèmes",
+                    "Bonne capacité à travailler en autonomie et en équipe"
                 ],
                 [
-                    "Étudiant en génie mécanique avec une oeuil pour le détail et de l'experience en programmation et en analyse de données",
+                    "Étudiant en génie mécanique avec de l'expérience en programmation et en analyse de données",
                     "Aptitude avérée à travailler de manière autonome et à appliquer des connaissances techniques pour améliorer les processus et résoudre les problèmes",
-                    "Forte capacité de travailler en équipe et à garder la documentation à jour"
+                    "Forte capacité de travailler en équipe et garder de la documentation à jour"
                 ], [
                     "Compétences en analyse et visualisation de données à l'aide de bibliothèques Python telles que Pandas, Plotly, Numpy et Matplotlib",
-                    "Expérience avec application de connaissances techniques trouvé dans des documents scientifiques à des cas concrets",
-                    "Capable de vulgarisé des informations complexes pour des publics techniques et non techniques"
+                    "Bonnes connaissances techniques, émanant de documents scientifiques, avec applications concrètes de celles-ci",
+                    "Capable de vulgariser des informations complexes pour des publics techniques et non techniques"
                 ]
             ],
             "experiences": [
@@ -100,9 +101,9 @@
                     "title": "Développeur full-stack",
                     "header": "Objectivity | Été 2021 and 2022",
                     "bullets": [
-                        "Développé et maintenu une série de microservices web, notamment les opérations CRUD pour une base de données MongoDB, un frontend React avec des hook RESTful via FastAPI",
-                        "Construit un visualiseur VTK 3D pour afficher des informations géologiques",
-                        "Implémenté des algorithmes de recherche de chemin en utilisant l'algèbre linéaire et les algorithmes génétiques pour déterminer si un trou de forage était intéressant à poursuivre lorsqu'il était hors de sa trajectoire",
+                        "Développement et maintient d’une série de microservices web, notamment les opérations CRUD pour une base de données MongoDB, un frontend React avec des hook RESTful via FastAPI",
+                        "Construction d’un visualiseur VTK 3D pour afficher des informations géologiques",
+                        "Implémentation des algorithmes de recherche de chemin, en utilisant l'algèbre linéaire et les algorithmes génétiques pour déterminer si un trou de forage était intéressant à poursuivre lorsqu'il était hors de sa trajectoire",
                         "Travaillé en équipe restreinte"
                     ]
                 },
@@ -110,21 +111,21 @@
                     "title": "Aide-enseignant",
                     "header": "Polytechnique Montréal | Automne 2022 jusqu'à maintenant",
                     "bullets": [
-                        "A participé activement à l'instruction du cours en aidant lors des séances de laboratoire et en répondant aux questions des étudiants",
-                        "A transmis les bases de Linux, de l'algèbre linéaire en Python, de SQL, de VBA et de PHP à plus de 60 étudiants",
-                        "A aidé les étudiants à comprendre les matériaux du cours, a fourni des exemples et des explications supplémentaires et a aidé les étudiants avec leurs devoirs",
-                        "A fourni des commentaires aux étudiants sur leur progression et les a aidés à identifier leurs points forts et leurs faiblesses"
+                        "Participation active à l'instruction du cours MEC1315, en aidant lors des séances de laboratoire et en répondant aux questions des étudiants",
+                        "Transmission de bases de Linux, de l'algèbre linéaire en Python, de SQL, de VBA et de PHP à plus de 60 étudiants",
+                        "Aider les étudiants à comprendre les matériaux du cours, fournir des exemples et des explications supplémentaires et aider les étudiants avec leurs devoirs",
+                        "Fournir des commentaires aux étudiants sur leur progression et les aider à identifier leurs points forts et leurs faiblesses"
                     ]
                 },
                 {
                     "title": "Tuteur",
                     "header": "Travailleur indépendant | Année scolaire 2021 et 2022",
                     "bullets": [
-                        "A donné des cours particuliers aux élèves du secondaire et du CEGEP dans divers matières, notamment les sciences et les mathématiques",
-                        "A communiqué efficacement avec les clients et les parents pour établir des objectifs et des attentes clairs pour leurs séances de tutorat",
-                        "A développé et mis en œuvre des plans de leçon personnalisés pour répondre aux besoins et aux styles d'apprentissage spécifiques de chaque élève",
-                        "A vulgarisé les concepts scientifiques complexes pour les rendre accessibles et compréhensibles pour les élèves du CEGEP",
-                        "A maintenu un horaire serré et a tenu des dossiers précis des progrès et des réalisations des élèves"
+                        "Donner des cours particuliers aux élèves du secondaire et du CEGEP dans divers matières, notamment les sciences et les mathématiques",
+                        "Communiquer efficacement avec les clients et les parents pour établir des objectifs et des attentes claires pour leurs séances de tutorat",
+                        "Développer et mettre en œuvre des plans de leçon personnalisés pour répondre aux besoins et aux styles d'apprentissage spécifiques de chaque élève",
+                        "Vulgariser les concepts scientifiques complexes pour les rendre accessibles et compréhensibles pour les élèves du CEGEP",
+                        "Maintenir un horaire serré et tenir des dossiers précis des progrès et des réalisations des élèves"
                     ]
                 }
             ],

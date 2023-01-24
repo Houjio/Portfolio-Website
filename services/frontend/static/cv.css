@@ -11,11 +11,10 @@ div.coverLetter {
     grid-template-columns: auto 30%;
 }
 
-@media only screen and (max-width: 800px),
-(orientation: portrait) and (max-width: 1800px) {
-    div.coverLetter {
+@media only screen and (orientation: portrait) {
+    div.page {
         grid-template-areas: "header header"
-       "left left",
+       "left left"
        "right right";
     }
 
@@ -50,10 +49,6 @@ div.page div.header h2 {
 
 div.page div.header h2 span {
     font-weight: 500;
-}
-
-div.page div.header p:first-of-type {
-    margin-top: 0.6rem;
 }
 
 div.page div.header p {

@@ -4,6 +4,7 @@ div.projects {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    background-color: #44444499;
 }
 
 div.projects div.wrapper {
